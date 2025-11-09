@@ -1,0 +1,67 @@
+{% extends 'showroom/base.html' %}
+{% block title %}Book a Bajaj Test Ride | Sri Shakthi Motors Bajaj Kadthal{% endblock %}
+{% block body_page %}book{% endblock %}
+{% block content %}
+<section class="section-header" style="margin-top: 1.5rem;">
+    <h2>Lock Your Bajaj Test Ride</h2>
+    <p>Pick a model, choose your slot, and our team will confirm in minutes</p>
+</section>
+
+<section class="cards-grid">
+    <article class="card">
+        <h3>Preferred Bike</h3>
+        <p>Select the Pulsar, Dominar, Avenger, Platina, or Chetak variant you would like to experience. We keep multiple demo units ready.</p>
+    </article>
+    <article class="card">
+        <h3>Easy Scheduling</h3>
+        <p>Morning and evening slots available all week. Need an exclusive slot? Mention it in comments and we will make it happen.</p>
+    </article>
+    <article class="card">
+        <h3>Required Documents</h3>
+        <p>Bring your valid driving licence and a secondary ID proof for a quick verification at the showroom before the test ride.</p>
+    </article>
+</section>
+
+<section style="margin-top: 3rem;" class="grid">
+    <div class="highlight-banner">
+        <h3>Test Ride Request Form</h3>
+        {% if messages %}
+        <ul class="spec-list" role="status">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <form id="testRideForm" method="post" action="{% url 'test_ride_submit' %}">
+            {% csrf_token %}
+            <label for="testRideName">Full Name</label>
+            <input id="testRideName" name="name" type="text" placeholder="e.g. Ramesh Kumar" required>
+
+            <label for="testRideEmail">Email</label>
+            <input id="testRideEmail" name="email" type="email" placeholder="you@example.com" required>
+
+            <label for="testRidePhone">Phone Number</label>
+            <input id="testRidePhone" name="phone" type="tel" placeholder="10-digit mobile" required>
+
+            <label for="testRideModel">Preferred Bike Model</label>
+            <select id="testRideModel" name="model" required>
+                <option value="">Select Bike Model</option>
+                {% for bike in bike_choices %}
+                <option value="{{ bike.slug }}">{{ bike.name }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="testRideDate">Preferred Date</label>
+            <input id="testRideDate" name="date" type="date" required>
+
+            <label for="testRideTime">Preferred Time Slot</label>
+            <input id="testRideTime" name="time" type="time" required>
+
+            <label for="testRideNotes">Additional Notes</label>
+            <textarea id="testRideNotes" name="notes" placeholder="Tell us if you need pickup, pillion ride, etc."></textarea>
+
+            <button class="btn btn-secondary" type="submit">Submit Request</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

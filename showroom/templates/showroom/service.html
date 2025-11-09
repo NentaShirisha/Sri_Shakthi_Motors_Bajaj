@@ -1,0 +1,99 @@
+{% extends 'showroom/base.html' %}
+{% block title %}Service &amp; Support | Sri Shakthi Motors Bajaj Kadthal{% endblock %}
+{% block body_page %}service{% endblock %}
+{% block content %}
+<section class="section-header" style="margin-top: 1.5rem;">
+    <h2>After-Sales You Can Count On</h2>
+    <p>From first service reminders to roadside assistance, we keep your Bajaj ride-ready</p>
+</section>
+
+<section class="cards-grid">
+    <article class="card">
+        <h3>Authorised Service Center</h3>
+        <p>Four fully-equipped bays with pneumatic tools, Bajaj diagnostic kits, and genuine spare parts inventory.</p>
+    </article>
+    <article class="card">
+        <h3>Periodic Maintenance</h3>
+        <p>We follow Bajaj-recommended maintenance schedules and offer reminder calls so you never miss a service.</p>
+    </article>
+    <article class="card">
+        <h3>Roadside Assistance</h3>
+        <p>24x7 Bajaj RSA support for punctures, towing, and on-site fixes within 90 km radius of Kadthal.</p>
+    </article>
+</section>
+
+<section style="margin-top: 3rem;">
+    <h3 style="margin-bottom: 1rem;">Recommended Service Intervals</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Service</th>
+                <th>Timeline</th>
+                <th>Key Activities</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1st Free Service</td>
+                <td>500 – 750 km / 30 days</td>
+                <td>Engine oil top-up, torque check, clutch/brake free-play set</td>
+            </tr>
+            <tr>
+                <td>2nd Free Service</td>
+                <td>2,500 – 2,750 km / 90 days</td>
+                <td>Oil change, filter cleaning, chain adjustment, ECU diagnostics</td>
+            </tr>
+            <tr>
+                <td>3rd Free Service</td>
+                <td>4,500 – 4,750 km / 180 days</td>
+                <td>Full inspection, coolant check (liquid cooled), brake bleeding</td>
+            </tr>
+            <tr>
+                <td>Paid Service</td>
+                <td>Every 5,000 km / 6 months</td>
+                <td>Oil + filter replacement, injector cleaning, wheel alignment</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section style="margin-top: 3rem;" class="grid">
+    <div class="highlight-banner">
+        <h3>Book a Service Slot</h3>
+        {% if messages %}
+        <ul class="spec-list" role="status">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <form id="serviceForm" method="post" action="{% url 'service_submit' %}">
+            {% csrf_token %}
+            <label for="serviceName">Name</label>
+            <input id="serviceName" name="name" type="text" required>
+            <label for="servicePhone">Phone</label>
+            <input id="servicePhone" name="phone" type="tel" required>
+            <label for="serviceModel">Bike Model</label>
+            <select id="serviceModel" name="model" required>
+                <option value="">Select Bike Model</option>
+                {% for bike in bike_choices %}
+                <option value="{{ bike.slug }}">{{ bike.name }}</option>
+                {% endfor %}
+            </select>
+            <label for="serviceDate">Preferred Date</label>
+            <input id="serviceDate" name="date" type="date" required>
+            <label for="serviceNotes">Service Notes</label>
+            <textarea id="serviceNotes" name="notes" placeholder="Mention concerns, add-ons, or pick-up requests"></textarea>
+            <button class="btn btn-secondary" type="submit">Schedule Service</button>
+        </form>
+    </div>
+    <div class="card">
+        <h3>Warranty &amp; Insurance</h3>
+        <ul class="spec-list">
+            <li>2-year manufacturer warranty + optional 3-year extended coverage</li>
+            <li>Cashless insurance tie-ups with Bajaj Allianz, ICICI Lombard, and Reliance GI</li>
+            <li>Instant claim assistance and estimate preparation at our workshop</li>
+        </ul>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'showroom/base.html' %}
+{% block title %}Sri Shakthi Motors Bajaj Kadthal | Bajaj Bikes Showroom{% endblock %}
+{% block body_page %}home{% endblock %}
+{% block content %}
+<section class="hero">
+    <div class="hero-slider">
+        {% for slide in hero_slides %}
+    <div class="hero-slide" style="background-image: url('{{ slide }}');"></div>
+        {% endfor %}
+    </div>
+    <div class="hero-content">
+    <h1>Ride with Power – Sri Shakthi Motors Bajaj</h1>
+    <p>Your authorized Bajaj partner for the latest bikes, smart finance, and reliable service in Kadthal.</p>
+        <div class="hero-actions">
+            <a class="btn btn-primary" href="{% url 'models' %}">View Models</a>
+            <a class="btn btn-secondary" href="{% url 'book_test_ride' %}">Book a Test Ride</a>
+            <a class="btn" href="{% url 'contact' %}">Contact Us</a>
+            <a class="btn" href="/admin/" style="background: #ff6b6b; color: white; margin-top: 0.5rem; display: inline-block; font-size: 0.9rem; padding: 0.5rem 1rem;">Admin Login</a>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="margin-top: 3rem;">
+    <div class="section-header">
+        <h2>Featured Bajaj Machines</h2>
+    <p>Hot picks delivered fresh at Sri Shakthi Motors Bajaj Kadthal</p>
+    </div>
+    <div id="featuredBikes" class="cards-grid"></div>
+</section>
+
+<section class="section" style="margin-top: 3rem;">
+    <div class="highlight-banner" id="highlightBanner"></div>
+</section>
+
+<section class="section" style="margin-top: 3rem;">
+    <div class="section-header">
+        <h2>Customer Cheers</h2>
+        <p>Hear it from Pulsar fanatics, Dominar tourers, and Avenger cruisers</p>
+    </div>
+    <div id="testimonialCarousel" class="carousel"></div>
+</section>
+
+<section class="section" style="margin-top: 3rem;">
+    <div class="cards-grid">
+        <article class="card">
+            <h3>Authorised & Trusted</h3>
+            <p>Registered Bajaj Auto dealership serving Kadthal since 2010 with genuine spares and trained technicians.</p>
+        </article>
+        <article class="card">
+            <h3>Finance Simplified</h3>
+            <p>Tie-ups with Bajaj Finance, HDFC, and IDFC First Bank for zero down payment and flexible EMIs.</p>
+        </article>
+        <article class="card">
+            <h3>Service First</h3>
+            <p>Priority service bays, reminder calls, and doorstep pick-up for annual maintenance packages.</p>
+        </article>
+    </div>
+</section>
+{% endblock %}

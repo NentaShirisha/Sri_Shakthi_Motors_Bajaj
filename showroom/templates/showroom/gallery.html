@@ -1,0 +1,92 @@
+{% extends 'showroom/base.html' %}
+{% load static %}
+{% block title %}Bajaj Showroom Gallery | Sri Shakthi Motors Bajaj Kadthal{% endblock %}
+{% block body_page %}gallery{% endblock %}
+{% block content %}
+<section class="section-header" style="margin-top: 1.5rem;">
+    <h2>Showroom Stories</h2>
+    <p>Delivery smiles, touring rides, and workshop action from Sri Shakthi Motors Bajaj</p>
+</section>
+
+<section style="margin-top: 2.5rem;" class="gallery-category">
+    <h3>Delivery Celebrations</h3>
+    <p>Families capturing the moment they ride home their new Bajaj motorcycles.</p>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="{% static 'assets/images/two.webp' %}" alt="Showroom team handing over keys to a new rider">
+            <span>Key Handover</span>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/images/five.webp' %}" alt="Happy customers celebrating a Bajaj delivery">
+            <span>Celebration Selfie</span>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/images/fifteen.avif' %}" alt="Bajaj owners posing with their new motorcycles">
+            <span>Delivery Day Memories</span>
+        </div>
+    </div>
+</section>
+
+<section style="margin-top: 2.5rem;" class="gallery-category">
+    <h3>Touring &amp; Community Rides</h3>
+    <p>Weekend explorations and night rides led by Sri Shakthi Motors Bajaj riders.</p>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="{% static 'assets/images/one.webp' %}" alt="Line-up of Bajaj bikes ready for a community ride">
+            <span>Ride Line-up</span>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/images/six.webp' %}" alt="Bajaj Dominar riders gearing up for a long ride">
+            <span>Dominar Trail</span>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/images/three.webp' %}" alt="Evening ride out from the Kadthal showroom">
+            <span>Night Ride</span>
+        </div>
+    </div>
+</section>
+
+<section style="margin-top: 2.5rem;" class="gallery-category">
+    <h3>Workshop &amp; Service Camp</h3>
+    <p>Certified technicians delivering quick turnaround service and care.</p>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="{% static 'assets/images/four.webp' %}" alt="Technicians inspecting a Bajaj motorcycle in the service bay">
+            <span>Inspection Bay</span>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/images/twelve.avif' %}" alt="Technicians preparing tools for a Bajaj service camp">
+            <span>Service Camp Prep</span>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/images/ten.avif' %}" alt="Service advisor handing over a tuned Bajaj bike">
+            <span>Ready for Pickup</span>
+        </div>
+    </div>
+</section>
+
+<section style="margin-top: 2.5rem;" class="gallery-category">
+    <h3>Electric &amp; Showroom Highlights</h3>
+    <p>Showroom ambience and the latest electric innovations from Bajaj.</p>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="{% static 'assets/images/eighteen.webp' %}" alt="Bajaj Chetak on display inside the showroom">
+            <span>Chetak Corner</span>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/images/eight.avif' %}" alt="Showroom spotlight on Bajaj performance motorcycles">
+            <span>Showroom Spotlight</span>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/images/fourteen.avif' %}" alt="Illuminated Sri Shakthi Motors Bajaj frontage at night">
+            <span>Evening Glow</span>
+        </div>
+    </div>
+</section>
+
+<section style="margin-top: 3rem;" class="highlight-banner">
+    <h3>Share Your Ride Story</h3>
+    <p>Tag us on Instagram @SriShakthiBajaj for a chance to get featured on this page.</p>
+    <a class="btn btn-secondary" href="https://instagram.com" target="_blank" rel="noopener">Follow on Instagram</a>
+</section>
+{% endblock %}

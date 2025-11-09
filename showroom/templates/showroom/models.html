@@ -1,0 +1,37 @@
+{% extends 'showroom/base.html' %}
+{% block title %}Bajaj Bike Line-up | Sri Shakthi Motors Bajaj Kadthal{% endblock %}
+{% block body_page %}models{% endblock %}
+{% block content %}
+<section class="section-header" style="margin-top: 1.5rem;">
+    <h2>Explore Bajaj 2-Wheelers</h2>
+    <p>Pick your ride from the Pulsar, Dominar, Avenger, Platina, and Chetak range</p>
+</section>
+
+<form id="filterForm" class="filters" aria-label="Bike filters">
+    <select id="filterFamily" name="family">
+        <option value="">Family</option>
+        <option value="Pulsar">Pulsar</option>
+        <option value="Dominar">Dominar</option>
+        <option value="Avenger">Avenger</option>
+        <option value="Platina">Platina</option>
+        <option value="Chetak">Chetak</option>
+    </select>
+    <select id="filterEngine" name="engine">
+        <option value="">Engine CC</option>
+        <option value="Under 150cc">Under 150cc</option>
+        <option value="150-200cc">150-200cc</option>
+        <option value="200-250cc">200-250cc</option>
+        <option value="250cc+">250cc+</option>
+        <option value="Electric">Electric</option>
+    </select>
+    <select id="filterPrice" name="price">
+        <option value="">Budget</option>
+        <option value="100000">Up to ₹1,00,000</option>
+        <option value="150000">Up to ₹1,50,000</option>
+        <option value="200000">Up to ₹2,00,000</option>
+        <option value="250000">Up to ₹2,50,000</option>
+    </select>
+</form>
+
+<div id="modelsGrid" class="cards-grid"></div>
+{% endblock %}

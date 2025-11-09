@@ -1,0 +1,68 @@
+{% extends 'showroom/base.html' %}
+{% block title %}Contact Sri Shakthi Motors Bajaj Kadthal{% endblock %}
+{% block body_page %}contact{% endblock %}
+{% block content %}
+<section class="section-header" style="margin-top: 1.5rem;">
+    <h2>We Are Right Here in Kadthal</h2>
+    <p>Reach out for sales inquiries, service appointments, or finance assistance</p>
+</section>
+
+<section class="cards-grid">
+    <article class="card contact-card">
+        <h3>Showroom</h3>
+        <ul class="contact-list">
+            <li><strong>Address:</strong> Opposite Muthut Finance, Srisailam Highway, Kadthal Village &amp; Mandal, Ranga Reddy District, Telangana</li>
+            <li><strong>Phone / WhatsApp:</strong> <a href="tel:+919949977780">+91 9949977780</a> (WhatsApp)</li>
+            <li><strong>Alternate Phone:</strong> <a href="tel:+918096111832">+91 8096111832</a></li>
+            <li><strong>Email:</strong> <a href="mailto:connect@srishakthibajaj.com">connect@srishakthibajaj.com</a></li>
+            <li><strong>Sales Hours:</strong> Mon–Sun 09:30 AM – 08:30 PM</li>
+            <li><strong>Service Hours:</strong> Mon–Sat 09:30 AM – 06:30 PM</li>
+        </ul>
+    </article>
+    <article class="card contact-card">
+        <h3>Support Hotlines</h3>
+        <ul class="contact-list">
+            <li><strong>Sales Desk:</strong> <a href="tel:+918096111832">+91 8096111832</a></li>
+            <li><strong>Service Bay:</strong> +91 98456 12345</li>
+            <li><strong>Finance Cell:</strong> +91 90001 23456</li>
+            <li><strong>Roadside Assist:</strong> 1800-210-2453</li>
+        </ul>
+    </article>
+</section>
+
+<section style="margin-top: 3rem;" class="grid">
+    <div>
+        <h3>Locate Us</h3>
+    <iframe title="Sri Shakthi Motors Bajaj Kadthal" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3799.8230901029013!2d78.571!3d17.062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcd5fc3a1b1d2c1%3A0x0!2zMTfCsDAzJzQzLjIiTiA3OMKwMzQnMTUuNiJF!5e0!3m2!1sen!2sin!4v1700000000000"></iframe>
+    </div>
+    <div class="highlight-banner">
+        <h3>Drop Us a Message</h3>
+        {% if messages %}
+        <ul class="spec-list" role="status">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <form id="contactForm" method="post" action="{% url 'contact_submit' %}">
+            {% csrf_token %}
+            <label for="contactName">Name</label>
+            <input id="contactName" name="name" type="text" required>
+            <label for="contactPhone">Phone</label>
+            <input id="contactPhone" name="phone" type="tel" required>
+            <label for="contactEmail">Email</label>
+            <input id="contactEmail" name="email" type="email" required>
+            <label for="contactModel">Interested Model</label>
+            <select id="contactModel" name="model">
+                <option value="">Select Bike Model (optional)</option>
+                {% for bike in bike_choices %}
+                <option value="{{ bike.slug }}">{{ bike.name }}</option>
+                {% endfor %}
+            </select>
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="message" placeholder="Tell us what you need help with"></textarea>
+            <button class="btn btn-secondary" type="submit">Send Now</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Sri Shakthi Motors Bajaj Kadthal{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    {% block extra_head %}{% endblock %}
+</head>
+<body
+    data-page="{% block body_page %}home{% endblock %}"
+    data-models-root="{{ models_root }}"
+    data-book-url="{{ book_url }}"
+    data-offers-url="{{ offers_url }}"
+    data-static-prefix="{{ static_prefix }}"
+    data-data-url="{{ data_url }}"
+    data-detail-pattern="{{ detail_pattern }}"
+    {% if page_slug %}data-bike-slug="{{ page_slug }}"{% endif %}
+>
+    <header>
+        <div class="navbar">
+            <a class="nav-brand" href="{% url 'home' %}">Sri Shakthi Motors Bajaj</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="{% url 'home' %}" data-page="home">Home</a></li>
+                    <li><a href="{% url 'about' %}" data-page="about">About</a></li>
+                    <li><a href="{% url 'models' %}" data-page="models">Bikes</a></li>
+                    <li><a href="{% url 'offers' %}" data-page="offers">Offers</a></li>
+                    <li><a href="{% url 'gallery' %}" data-page="gallery">Gallery</a></li>
+                    <li><a href="{% url 'service' %}" data-page="service">Service</a></li>
+                    <li><a href="{% url 'book_test_ride' %}" data-page="book">Book Test Ride</a></li>
+                    <li><a href="{% url 'contact' %}" data-page="contact">Contact</a></li>
+                    <li><a href="/admin/" class="admin-link" style="color: #ff6b6b; font-weight: 600;" title="Admin Login">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>Sri Shakthi Motors Bajaj</h3>
+                    <p>Opposite Muthut Finance, Srisailam Highway, Kadthal Village &amp; Mandal, Ranga Reddy District, Telangana</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com" aria-label="Facebook">Fb</a>
+                        <a href="https://instagram.com" aria-label="Instagram">Ig</a>
+                        <a href="https://youtube.com" aria-label="YouTube">Yt</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="{% url 'models' %}">Bajaj Bikes</a></li>
+                        <li><a href="{% url 'offers' %}">Current Offers</a></li>
+                        <li><a href="{% url 'book_test_ride' %}">Test Ride</a></li>
+                        <li><a href="{% url 'service' %}">Service Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>Call / WhatsApp: <a href="tel:+919949977780">+91 9949977780</a> (WhatsApp)</li>
+                        <li>Alternate: <a href="tel:+918096111832">+91 8096111832</a></li>
+                        <li>Email: <a href="mailto:connect@srishakthibajaj.com">connect@srishakthibajaj.com</a></li>
+                        <li>Sales: 09:30 AM – 08:30 PM</li>
+                        <li>Service: 09:30 AM – 06:30 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © <span id="footerYear"></span> Sri Shakthi Motors Bajaj Kadthal. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    {% block whatsapp_button %}
+    <a id="whatsappButton" class="whatsapp-btn" data-phone="919949977780">Chat on WhatsApp</a>
+    {% endblock %}
+
+    {% if selected_bike %}
+    {{ selected_bike|json_script:"selected-bike-data" }}
+    {% endif %}
+    <script>
+        window.__BAJAJ_STATIC_PREFIX = '{{ static_prefix }}';
+        window.__BAJAJ_DATA_URL = '{{ data_url }}';
+        window.__BAJAJ_MODELS_ROOT = '{{ models_root }}';
+        window.__BAJAJ_BOOK_URL = '{{ book_url }}';
+    window.__BAJAJ_OFFERS_URL = '{{ offers_url }}';
+    window.__BAJAJ_DETAIL_PATTERN = '{{ detail_pattern }}';
+        const selectedBikeElement = document.getElementById('selected-bike-data');
+        window.__BAJAJ_SELECTED_BIKE = selectedBikeElement ? JSON.parse(selectedBikeElement.textContent) : null;
+    </script>
+    <script src="{% static 'scripts/main.js' %}" defer></script>
+    <script>
+        document.getElementById('footerYear').textContent = new Date().getFullYear();
+    </script>
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>

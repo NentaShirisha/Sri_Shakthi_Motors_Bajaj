@@ -1,0 +1,77 @@
+{% extends 'showroom/base.html' %}
+{% load static %}
+{% block title %}About Sri Shakthi Motors Bajaj Kadthal{% endblock %}
+{% block body_page %}about{% endblock %}
+{% block content %}
+<section class="section-header" style="margin-top: 1.5rem;">
+    <h2>Driven by Trust Since 2010</h2>
+    <p>Official Bajaj dealership with Kadthal roots and pan-Telangana ambitions</p>
+</section>
+
+<section class="cards-grid">
+    <article class="card">
+        <h3>Our Story</h3>
+    <p>Founded in 2010, Sri Shakthi Motors Bajaj began with a three-bay facility on the Hyderabad–Srisailam highway. Fifteen years later, we deliver 400+ bikes every quarter and support thousands of happy Bajaj riders across Ranga Reddy district.</p>
+    </article>
+    <article class="card">
+        <h3>Vision</h3>
+        <p>Enable every rider in southern Telangana to experience Bajaj performance with transparent pricing, accessible finance, and quick after-sales service.</p>
+    </article>
+    <article class="card">
+        <h3>Mission</h3>
+        <p>Deliver memorable delivery ceremonies, proactive maintenance support, and trustworthy advice that builds lifelong relationships with every customer.</p>
+    </article>
+</section>
+
+<section style="margin-top: 3rem;" class="grid">
+    <div class="highlight-banner">
+    <h3>Why Choose Sri Shakthi Motors Bajaj</h3>
+        <ul class="spec-list">
+            <li>Authorised Bajaj Auto dealership with genuine spares inventory</li>
+            <li>Dedicated finance team to secure zero-down-payment approvals</li>
+            <li>Express service lane with pick-up and drop across Kadthal &amp; Kandukur</li>
+            <li>Complimentary riding gear fitment and delivery celebrations</li>
+        </ul>
+    </div>
+    <div class="cards-grid">
+        <article class="card">
+            <h3>Awards &amp; Recognition</h3>
+            <ul class="spec-list">
+                <li>Bajaj Platinum Dealership Award 2023</li>
+                <li>Customer Delight Excellence – South Zone 2024</li>
+                <li>Top Finance Penetration – Bajaj Finance 2022</li>
+            </ul>
+        </article>
+        <article class="card">
+            <h3>Our Team</h3>
+            <p>30+ trained sales champions, 18 certified technicians, and 4 delivery specialists who ensure every rider rolls out with a smile.</p>
+            <div class="badge-group">
+                <span class="badge">Dedicated Relationship Managers</span>
+                <span class="badge">Certified Bajaj Master Technicians</span>
+                <span class="badge">Doorstep Service Crew</span>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section style="margin-top: 3rem;">
+    <div class="section-header">
+        <h2>Showroom Moments</h2>
+        <p>Swap with your own delivery celebration photos to bring this section alive</p>
+    </div>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="{% static 'assets/images/five.webp' %}" alt="Happy customers celebrating a Bajaj delivery">
+            <span>Flagship Deliveries</span>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/images/two.webp' %}" alt="Showroom team handing over keys to riders">
+            <span>Showroom Team</span>
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'assets/images/four.webp' %}" alt="Bajaj technicians working inside the service bay">
+            <span>Service Excellence</span>
+        </div>
+    </div>
+</section>
+{% endblock %}
