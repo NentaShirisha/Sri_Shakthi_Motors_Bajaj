@@ -1,0 +1,286 @@
+{
+    "bikes": [
+        {
+            "slug": "pulsar-n160",
+            "name": "Pulsar N160",
+            "family": "Pulsar",
+            "isFeatured": true,
+            "heroImage": "assets/images/seven.avif",
+            "gallery": [
+                "assets/images/nine.avif",
+                "assets/images/ten.avif",
+                "assets/images/eleven.avif"
+            ],
+            "engine": {
+                "cc": 164.82,
+                "ccCategory": "150-200cc",
+                "power": "15.7 PS @ 8,750 rpm",
+                "torque": "14.65 Nm @ 6,750 rpm",
+                "cooling": "Oil cooled",
+                "transmission": "5-speed"
+            },
+            "performance": {
+                "mileage": "45 kmpl (claimed)",
+                "topSpeed": "120 km/h",
+                "summary": "Streetfighter stance with linear power delivery for daily commutes and spirited weekend rides."
+            },
+            "chassis": {
+                "frontBrake": "Dual-channel ABS, 280 mm Disc",
+                "rearBrake": "230 mm Disc",
+                "suspension": "Telescopic (front), Mono-shock (rear)",
+                "weight": "152 kg",
+                "seatHeight": "795 mm"
+            },
+            "colors": [
+                "Brooklyn Black",
+                "Racing Red",
+                "Caribbean Blue"
+            ],
+            "price": {
+                "exShowroom": 130000,
+                "onRoad": 152000,
+                "emi": "₹3,599/month"
+            },
+            "features": [
+                "Bi-functional LED projector headlamp",
+                "USB charging port",
+                "Reverse LCD console with gear indicator",
+                "Dual-channel ABS"
+            ]
+        },
+        {
+            "slug": "dominar-400",
+            "name": "Dominar 400",
+            "family": "Dominar",
+            "isFeatured": true,
+            "heroImage": "assets/images/six.webp",
+            "gallery": [
+                "assets/images/three.webp",
+                "assets/images/thirteen.avif",
+                "assets/images/fourteen.avif"
+            ],
+            "engine": {
+                "cc": 373.3,
+                "ccCategory": "250cc+",
+                "power": "40 PS @ 8,800 rpm",
+                "torque": "35 Nm @ 6,500 rpm",
+                "cooling": "Liquid cooled",
+                "transmission": "6-speed with slipper clutch"
+            },
+            "performance": {
+                "mileage": "30 kmpl (claimed)",
+                "topSpeed": "155 km/h",
+                "summary": "Built for highway touring with effortless cruising and touring-ready accessories."
+            },
+            "chassis": {
+                "frontBrake": "320 mm Disc with ABS",
+                "rearBrake": "230 mm Disc with ABS",
+                "suspension": "USD fork (front), Mono-shock (rear)",
+                "weight": "193 kg",
+                "seatHeight": "800 mm"
+            },
+            "colors": [
+                "Aurora Green",
+                "Charcoal Black"
+            ],
+            "price": {
+                "exShowroom": 232000,
+                "onRoad": 265000,
+                "emi": "₹5,899/month"
+            },
+            "features": [
+                "Touring kit with saddle stays and tall visor",
+                "Full LED lighting system",
+                "Split reverse LCD instrumentation",
+                "Dual-channel ABS"
+            ]
+        },
+        {
+            "slug": "avenger-cruise-220",
+            "name": "Avenger Cruise 220",
+            "family": "Avenger",
+            "isFeatured": true,
+            "heroImage": "assets/images/five.webp",
+            "gallery": [
+                "assets/images/fifteen.avif",
+                "assets/images/sixteen.avif"
+            ],
+            "engine": {
+                "cc": 220,
+                "ccCategory": "200-250cc",
+                "power": "19.03 PS @ 8,500 rpm",
+                "torque": "17.55 Nm @ 7,000 rpm",
+                "cooling": "Oil cooled",
+                "transmission": "5-speed"
+            },
+            "performance": {
+                "mileage": "40 kmpl (claimed)",
+                "topSpeed": "120 km/h",
+                "summary": "Ultra-comfortable cruiser ideal for relaxed long rides and effortless city glides."
+            },
+            "chassis": {
+                "frontBrake": "280 mm Disc",
+                "rearBrake": "Drum",
+                "suspension": "Telescopic with double anti-friction bush",
+                "weight": "163 kg",
+                "seatHeight": "737 mm"
+            },
+            "colors": [
+                "Moon White",
+                "Auburn Black"
+            ],
+            "price": {
+                "exShowroom": 141000,
+                "onRoad": 168000,
+                "emi": "₹3,999/month"
+            },
+            "features": [
+                "Digital-analogue console",
+                "Low-slung touring stance",
+                "Large windshield",
+                "Pillion backrest"
+            ]
+        },
+        {
+            "slug": "platina-110",
+            "name": "Platina 110 ABS",
+            "family": "Platina",
+            "isFeatured": false,
+            "heroImage": "assets/images/two.webp",
+            "gallery": [
+                "assets/images/nineteen.avif",
+                "assets/images/twenty.avif"
+            ],
+            "engine": {
+                "cc": 115.45,
+                "ccCategory": "Under 150cc",
+                "power": "8.6 PS @ 7,000 rpm",
+                "torque": "9.81 Nm @ 5,000 rpm",
+                "cooling": "Air cooled",
+                "transmission": "5-speed"
+            },
+            "performance": {
+                "mileage": "70 kmpl (claimed)",
+                "topSpeed": "90 km/h",
+                "summary": "Fuel-efficient commuter engineered for long distances with minimal running costs."
+            },
+            "chassis": {
+                "frontBrake": "ABS, 240 mm Disc",
+                "rearBrake": "110 mm Drum",
+                "suspension": "Hydraulic, SNS (rear)",
+                "weight": "122 kg",
+                "seatHeight": "804 mm"
+            },
+            "colors": [
+                "Cocktail Wine Red",
+                "Ebony Black",
+                "Saffire Blue"
+            ],
+            "price": {
+                "exShowroom": 82500,
+                "onRoad": 98000,
+                "emi": "₹2,299/month"
+            },
+            "features": [
+                "Segment-first anti-lock braking system",
+                "Longest seat in the segment",
+                "LED DRLs",
+                "Spring-in-Spring suspension"
+            ]
+        },
+        {
+            "slug": "pulsar-ns200",
+            "name": "Pulsar NS200",
+            "family": "Pulsar",
+            "isFeatured": false,
+            "heroImage": "assets/images/eight.avif",
+            "gallery": [
+                "assets/images/twelve.avif",
+                "assets/images/twenty1.avif"
+            ],
+            "engine": {
+                "cc": 199.5,
+                "ccCategory": "150-200cc",
+                "power": "24.5 PS @ 9,750 rpm",
+                "torque": "18.74 Nm @ 8,000 rpm",
+                "cooling": "Liquid cooled",
+                "transmission": "6-speed"
+            },
+            "performance": {
+                "mileage": "36 kmpl (claimed)",
+                "topSpeed": "135 km/h",
+                "summary": "Aggressive naked sports bike delivering pulse-raising performance and sharp handling."
+            },
+            "chassis": {
+                "frontBrake": "300 mm Disc with ABS",
+                "rearBrake": "230 mm Disc with ABS",
+                "suspension": "Telescopic (front), Nitrox mono-shock (rear)",
+                "weight": "158 kg",
+                "seatHeight": "805 mm"
+            },
+            "colors": [
+                "Burnt Red",
+                "Plasma Blue",
+                "Pewter Grey"
+            ],
+            "price": {
+                "exShowroom": 149000,
+                "onRoad": 174000,
+                "emi": "₹3,899/month"
+            },
+            "features": [
+                "Perimeter frame for superior handling",
+                "Liquid-cooled triple-spark engine",
+                "Race-inspired styling",
+                "Dual-channel ABS"
+            ]
+        },
+        {
+            "slug": "chetak-premium",
+            "name": "Bajaj Chetak Premium",
+            "family": "Chetak",
+            "isFeatured": false,
+            "heroImage": "assets/images/eighteen.webp",
+            "gallery": [
+                "assets/images/one.webp",
+                "assets/images/twenty2.avif"
+            ],
+            "engine": {
+                "cc": 0,
+                "ccCategory": "Electric",
+                "power": "Peak 4.2 kW",
+                "torque": "20 Nm",
+                "cooling": "Air cooled battery",
+                "transmission": "Automatic"
+            },
+            "performance": {
+                "mileage": "90 km/charge (IDC)",
+                "topSpeed": "70 km/h",
+                "summary": "Silent, connected electric scooter with premium fit, finish, and intuitive tech."
+            },
+            "chassis": {
+                "frontBrake": "Disc",
+                "rearBrake": "Drum",
+                "suspension": "Single-sided trailing arm",
+                "weight": "132 kg",
+                "seatHeight": "780 mm"
+            },
+            "colors": [
+                "Indigo Metallic",
+                "Hazelnut",
+                "Brooklyn Black"
+            ],
+            "price": {
+                "exShowroom": 155000,
+                "onRoad": 172000,
+                "emi": "₹4,199/month"
+            },
+            "features": [
+                "Connected tech with mobile app",
+                "IP67-rated battery pack",
+                "Reverse assist mode",
+                "Discernible steel body"
+            ]
+        }
+    ]
+}
