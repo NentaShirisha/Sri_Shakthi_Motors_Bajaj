@@ -25,7 +25,8 @@ SECRET_KEY = '#@(n0w_#i@y=1^-u8^)hmq80)*f+&(lcy0uy#ajhec6egy!tgw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['sri-shakthi-motors-bajaj-llw3.onrender.com', 'localhost', '127.0.0.1']
+
 
 
 # Application definition
@@ -122,3 +123,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
